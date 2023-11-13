@@ -1,11 +1,13 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 // get all patients
 export const getPatients = createAsyncThunk(
     'patients/get',
     async (_) => {
         try {
-            let res: Response = await fetch("https://patient-management-api.vercel.app/api/patients");
+            let res: Response = await fetch(`${API_BASE_URL}/patients`);
             let data = await res.json();
             return data.patients;
         } catch(error) {
@@ -21,7 +23,7 @@ export const getPatientDetails = createAsyncThunk(
     'patientDetails/get',
     async (patientId: string | undefined) => {
         try {
-            let res: Response = await fetch(`https://patient-management-api.vercel.app/api/patients/${patientId}`);
+            let res: Response = await fetch(`${API_BASE_URL}/patients/${patientId}`);
             let data = await res.json();
             return data.foundPatient;
         } catch(error) {
@@ -35,7 +37,7 @@ export const addNewPatient = createAsyncThunk(
     'addPatient/post',
     async (patientDetails: Partial<Patient>) => {
         try {
-            let res: Response = await fetch(`https://patient-management-api.vercel.app/api/patients`, {
+            let res: Response = await fetch(`${API_BASE_URL}/patients`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -58,7 +60,7 @@ export const deletePatient = createAsyncThunk(
     'deletePatient/delete',
     async (patientId: string | undefined) => {
         try {
-            let res: Response = await fetch(`https://patient-management-api.vercel.app/api/patients/${patientId}`, {
+            let res: Response = await fetch(`${API_BASE_URL}/patients/${patientId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -77,7 +79,7 @@ export const editPatientDetails = createAsyncThunk(
     'editPatientDetails/put',
     async (patientDetails: Partial<Patient>) => {
         try {
-            let res: Response = await fetch(`https://patient-management-api.vercel.app/api/patients/${patientDetails._id}`, {
+            let res: Response = await fetch(`${API_BASE_URL}/patients/${patientDetails._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

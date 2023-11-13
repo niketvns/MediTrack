@@ -1,11 +1,13 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 // fetch all wards
 export const getWards = createAsyncThunk(
     'wards/get',
     async (_) => {
         try {
-            let res: Response = await fetch("https://patient-management-api.vercel.app/api/wards");
+            let res: Response = await fetch(`${API_BASE_URL}/wards`);
             let data = await res.json();
             return data.wards;
         } catch(error) {
@@ -19,7 +21,7 @@ export const getWardDetails = createAsyncThunk(
     'wardDetails/get',
     async (wardId: string | undefined) => {
         try {
-            let res: Response = await fetch(`https://patient-management-api.vercel.app/api/wards/${wardId}`);
+            let res: Response = await fetch(`${API_BASE_URL}/wards/${wardId}`);
             let data = await res.json();
             return data.foundWard;
         } catch(error) {
@@ -34,7 +36,7 @@ export const addNewWard = createAsyncThunk(
     'addWard/post',
     async (wardDetails: Partial<Ward>) => {
         try {
-            let res: Response = await fetch(`https://patient-management-api.vercel.app/api/wards`, {
+            let res: Response = await fetch(`${API_BASE_URL}/wards`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -57,7 +59,7 @@ export const deleteWard = createAsyncThunk(
     'deleteward/delete',
     async (wardId: string | undefined) => {
         try {
-            let res: Response = await fetch(`https://patient-management-api.vercel.app/api/wards/${wardId}`, {
+            let res: Response = await fetch(`${API_BASE_URL}/wards/${wardId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -76,7 +78,7 @@ export const editWardDetails = createAsyncThunk(
     'editWardDetails/put',
     async (wardDetails: Partial<Patient>) => {
         try {
-            let res: Response = await fetch(`https://patient-management-api.vercel.app/api/patients/${wardDetails._id}`, {
+            let res: Response = await fetch(`${API_BASE_URL}/patients/${wardDetails._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
