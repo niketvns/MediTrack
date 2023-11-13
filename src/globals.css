@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --bg-sidebar: #21226a;
+  --bg-primary: ;
+  --text-primary: #202748;
+  --color-secondary: #a5b8cc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-primary);
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]::-moz-number-up-down,
+input[type="number"]::-moz-number-spin-box {
+  display: none;
+}
+
+@media screen and (width < 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  .App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+}

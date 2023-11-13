@@ -1,0 +1,31 @@
+.patients {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.patient-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.patient-item button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.patients a {
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.patients a:hover {
+  text-decoration: underline;
+}

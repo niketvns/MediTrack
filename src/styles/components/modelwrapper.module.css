@@ -1,0 +1,19 @@
+.model {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (width < 500px) {
+  .model {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}

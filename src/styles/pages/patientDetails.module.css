@@ -1,0 +1,29 @@
+.patient-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.patient-details .profile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.patient-details .profile img {
+  width: 150px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.patient-details .profile p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.ind-details {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 1.1rem;
+}

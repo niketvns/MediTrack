@@ -1,0 +1,67 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 450px;
+  background-color: white;
+  padding: 20px 40px;
+  position: relative;
+  overflow: auto;
+}
+
+.form .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form .close:hover {
+  transform: scale(1.2);
+  transition: all ease 0.3s;
+}
+
+.form h2 {
+  margin-bottom: 10px;
+}
+
+.form .label_input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form .label_input input,
+.form .label_input select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.form button {
+  padding: 10px;
+  background-color: var(--bg-sidebar);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+@media screen and (width < 500px) {
+  .form {
+    width: 100vw;
+    min-width: auto;
+    height: 100vh;
+  }
+
+  .form .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

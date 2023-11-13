@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar .title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .title .hamburger {
+  display: none;
+}
+
+.navbar .source-code-link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 20px;
+  user-select: none;
+  font-size: 0.8rem;
+}
+
+.navbar .source-code-link:hover {
+  transition: all ease 0.3s;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (width < 600px) {
+  .navbar .title .hamburger {
+    display: block;
+  }
+}

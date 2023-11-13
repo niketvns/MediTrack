@@ -1,0 +1,31 @@
+.wards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ward-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.ward-item button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.wards a {
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.wards a:hover {
+  text-decoration: underline;
+}

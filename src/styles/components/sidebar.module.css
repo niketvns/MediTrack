@@ -1,0 +1,73 @@
+.sidebar {
+  padding: 10px 0;
+  background-color: #21226a;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar .logo {
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 20px 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.sidebar .logo .icon {
+  font-size: 1.4rem;
+}
+
+.sidebar .navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.sidebar .navigation a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  transition: all ease 0.2s;
+  padding: 5px;
+  user-select: none;
+}
+
+.sidebar .navigation a .icon {
+  background-color: #4e4b8b;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.sidebar .social {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.sidebar .social a {
+  color: white;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+@media screen and (width < 600px) {
+  .sidebar {
+    position: absolute;
+    transform: translateX(-100%);
+  }
+}
