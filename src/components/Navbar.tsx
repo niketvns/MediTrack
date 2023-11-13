@@ -16,7 +16,7 @@ const Navbar: FC<Props> = ({title}): JSX.Element => {
                 </div>
                 {title}
             </div>
-            <a href='https://github.com/niketvns' className={styles['source-code-link']} target='_blank' rel='noreferrer noopener'>
+            <a href='https://github.com/niketvns/MediTrack' className={styles['source-code-link']} target='_blank' rel='noreferrer noopener'>
                 <FiCode />
                 Code
             </a>
