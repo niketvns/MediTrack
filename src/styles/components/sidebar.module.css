@@ -66,8 +66,8 @@
 }
 
 @media screen and (width < 600px) {
-  .sidebar {
+  /* .sidebar {
     position: absolute;
     transform: translateX(-100%);
-  }
+  } */
 }

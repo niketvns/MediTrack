@@ -39,7 +39,7 @@
 }
 
 @media screen and (width < 600px) {
-  .navbar .title .hamburger {
+  /* .navbar .title .hamburger {
     display: block;
-  }
+  } */
 }
