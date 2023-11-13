@@ -22,7 +22,7 @@ const Dashboard: FC<Props> = ({}): JSX.Element => {
     const totalBeds = wards.reduce((acc: any, ward: Ward) => acc + ward.capacity, 0)
     const totalOccupancy = ((totalPatients * 100) / totalBeds).toFixed(2);
     const wardCount = allPatients.reduce((acc: any, patient: Patient): any => {
-        acc[patient.ward.wardNumber] = (acc[patient.ward.wardNumber] ?? 0) + 1
+        acc[patient.ward?.wardNumber] = (acc[patient.ward?.wardNumber] ?? 0) + 1
         return acc;
     }, {})
 

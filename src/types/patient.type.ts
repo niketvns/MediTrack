@@ -6,5 +6,5 @@ type Patient = {
     gender: string;
     medicalHistory: Array<string>;
     name: string;
-    ward: Ward | string;
+    ward: any;
 }
